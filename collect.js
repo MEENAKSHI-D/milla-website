@@ -17,3 +17,14 @@ searchbar.addEventListener("keyup", function(event) {
         }
     }
 });
+var sidenav=document.getElementById("sidenav");
+var menuicon=document.getElementById("menuicon");
+var lock=document.getElementById("locknav");
+ menuicon.addEventListener("click",function()
+{
+    sidenav.style.left=0
+
+})
+locknav.addEventListener("click",function(){
+    sidenav.style.left="-50%"
+})

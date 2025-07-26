@@ -36,6 +36,40 @@
     width: 100%;
 
 }
+#sidenav{
+  background-color: #ff4d6d;
+  color: white;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  width: 30%;
+  height: 100vh;
+  left: -50%;
+}
+#locknav{
+  text-align: left;
+  padding: 20px;
+  display: inline;
+  cursor: pointer;
+  
+}
+
+.nav-2 img{
+  width: 20px;
+  height: 20px;
+}
+.nav-3 a{
+  color: black;
+    margin-right: 5px;
+    font-size: 16px;
+    text-decoration:none;
+    padding:10px 5px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+}
 
     .header{
         color: purple;
@@ -43,7 +77,7 @@
 
     }
 
-#mainnav nav a{
+.nav-1 a{
     color: black;
     margin-right: 5px;
     font-size: 16px;
@@ -112,10 +146,13 @@ a:hover{
       display: flex;
       justify-content: space-between;
       margin-top: 20px;
+      flex-wrap: wrap;
       
     }
       .new-row{
         position: relative;
+        box-sizing: border-box;
+        flex-basis: 22%;
         
       }
     .overlay{
@@ -170,6 +207,7 @@ a:hover{
     }
     .best{
        display: flex;
+       flex-wrap: wrap;
       gap: 10px;
       width: 100%;
       justify-content: space-between;
@@ -185,7 +223,7 @@ a:hover{
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
+      display: flex;
       border-radius: 10px;
     }
     .like{
@@ -285,35 +323,22 @@ background-color: peachpuff;
       
     }
 
-    .saree-row{
+    .product-card{
       display: flex;
+      flex-wrap: wrap;
       gap: 10px;
       margin-top: 20px;
       justify-content: space-around;
       
-    }
-
-
-    .saree img{
-      width: 250px;
-      height: 350px;
-      object-fit: cover;
-      border: wheat 2px solid;
-      border-radius: 20px;
-    
     }
     .kurta{
       padding: 20px;
 
     }
 
-    .kurta-row{
+    
+    .product-card img{
       display: flex;
-      gap: 10px;
-      margin-top: 20px;
-      justify-content: space-around;
-    }
-    .kurta-row img{
       width: 200px;
       height: 350px;
       object-fit: cover;
@@ -324,37 +349,12 @@ background-color: peachpuff;
     .dress{
       padding: 20px;
     }
-    .dress-row{
-      display: flex;
-      gap: 10px;
-      justify-content: space-around;
-      margin-top: 20px;
-    }
-    .dress-row img{
-      width: 200px;
-      height: 350px;
-      object-fit: cover;
-      border: 2px solid wheat;
-      border-radius: 20px;
-    }
+    
     .crop{
       padding: 20px;
 
     }
-    .crop-row{
-      display: flex;
-      gap: 10px;
-      margin-top: 20px;
-      justify-content: space-around;
-
-    }
-    .crop-row img{
-      width: 200px;
-      height: 350px;
-      object-fit: cover;
-      border: solid wheat 2px;
-      border-radius: 20px ;
-    }
+    
 
 
 
@@ -411,4 +411,36 @@ label {
   text-align: center;
   color: green;
   font-weight: bold;
+}
+
+
+@media screen  and (min-width:800px){
+  .nav-2 img ,.nav-3 a, .closenav{
+    display:none;
+  }
+  .nav-1 a{
+    display: inline-block;
+  }
+  .new-arrival, .best-seller{
+    flex-basis: 40%;
+  }
+}
+@media screen and  (max-width:600px)
+{
+  .nav-2 img ,.closenav, .nav-3 a{
+    display: block;
+  }
+  .nav-1 a{
+    display:none;
+  }
+  .new-arrival , .best-seller{
+    flex-basis: 100%;
+  }
+
+  #product-card{
+    flex-basis: 40%;
+  }
+  .heart{
+    flex-basis: 40%;
+  }
 }
