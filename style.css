@@ -414,7 +414,7 @@ label {
 }
 
 
-@media screen  and (min-width:800px){
+@media screen  and (max-width:1000px){
   .nav-2 img ,.nav-3 a, .closenav{
     display:none;
   }
@@ -425,7 +425,7 @@ label {
     flex-basis: 40%;
   }
 }
-@media screen and  (max-width:600px)
+@media screen and  (max-width:500px)
 {
   .nav-2 img ,.closenav, .nav-3 a{
     display: block;
