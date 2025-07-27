@@ -414,7 +414,7 @@ label {
 }
 
 
-@media screen  and (max-width:1000px){
+@media screen  and (min-width:800px){
   .nav-2 img ,.nav-3 a, .closenav{
     display:none;
   }
